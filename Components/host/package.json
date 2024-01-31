@@ -1,0 +1,33 @@
+{
+  "name": "host",
+  "description": "",
+  "version": "1.0.0",
+  "oc": {
+    "files": {
+      "data": "server.js",
+      "static": [
+        "img"
+      ],
+      "template": {
+        "src": "template.hbs",
+        "type": "oc-template-handlebars"
+      }
+    },
+    "parameters": {
+      "name": {
+        "default": "Abdul Rehman",
+        "description": "This component host all the other components",
+        "example": "Jane Doe",
+        "mandatory": false,
+        "type": "string"
+      }
+    }
+  },
+  "devDependencies": {
+    "oc-template-handlebars-compiler": "6.5.1"
+  },
+  "scripts": {
+    "start": "oc dev .. --components host",
+    "build": "oc package ."
+  }
+}
